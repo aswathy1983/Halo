@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Finger Print Lock Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to edit fingerprint user profile in  Halo and  Fingerprint lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	
+
+	
+	 
+	 <test name="Finger Print User Profile Test">
+		<classes>
+			<class name="tests.app.EditFingerPrintTest"> 
+			  <methods>
+			  		<!-- <include name="verifyUIFPViewUserName"></include>
+			  		<include name="verifyUIFPUserProfile"></include>
+			  		<include name="updateUserProfileName"></include>
+			  		<include name="disableFPProfile"></include>
+			  		<include name="enableFPProfile"></include>
+			  		<include name="changeFPUserProfileDigitType"></include>
+			  	    <include name="deleteOneFingerPrint"></include>
+			  		<include name="checkDeleteBothFingerPrint"></include>
+			  		<include name="verifyAddFingerPrint"></include>
+			  		<include name="validateUserProfileName"></include> 
+			  		<include name="setScheduleTypeAnyTime"></include>
+			  		<include name="valScheduleTypeWeekly"></include> 
+			  		<include name="setScheduleTypeWeekly"></include> 
+			  		<include name="setScheduleTypeDate"></include> 
+			  		<include name="valScheduleTypeDate"></include>
+			  		<include name="removeFPProfileTest"></include> 
+			  		<include name="disabledProfileTest"></include> 
+			  		<include name="valFPUserProfileDigitType"></include> 
+			  		<include name="valSameFPUserProfileDigitType"></include> -->
+			  		<include name="deleteFingerPrintTwo"></include>
+			  		<include name="networkOutOfRangeFPTest"></include>
+			  		<!-- <include name="bleOutOfRangeWifiOffFPTest"></include> -->
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Finger Print Lock General Features Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute Lock General Features of Fingerprint lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	
+	 
+	 <test name="Finger Print Lock General Features Test">
+		<classes>
+			<class name="tests.app.FPLockAttributesTest"> 
+			  <methods>
+			  	 	 <include name="viewLastUpdateTimeDashboardTest"></include> 
+			  		 <!--<include name="viewLockInfoTest"></include>-->
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

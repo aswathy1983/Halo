@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Kwikset-iOS Automation Smoke Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute all features as part of Smoke Testing the Kwikset-iOS Application -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+
+	<!--
+	<test name="App Upgrade Test">
+		<classes>
+			<class name="tests.app.AppUpgradeTest"> 
+				<methods>
+				    <include name="appUpgradeTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+
+
+	<test name="Create Account Test">
+		<classes>
+			<class name="tests.app.CreateAccountTest"> 
+				<methods>
+				    <include name="clickCreateAccountButtonTest"></include>
+				    <include name="enterAccountNameTest"></include>
+				    <include name="emailVerificationTest"></include>
+				    <include name="phoneVerificationTest"></include>
+				    <include name="SetUpSecretQuestionsTest"></include> 
+				    <include name="enterPasswordTest"></include> 
+				 </methods>
+			</class>
+		</classes>
+	</test> 
+
+ 
+	
+	<test name="Login">
+		<classes>
+			<class name="tests.app.LoginTest"> 
+				<methods>
+				    <include name="enterLoginCredentialsTest"></include>
+				    <include name="verificationTest"></include>
+				 </methods>
+			</class>
+		</classes>
+	</test> 
+ 
+	<test name="Add First Home">
+		<classes>
+			<class name="tests.app.AddFirstHomeTest"> 
+				<methods>
+				    <include name="createFirstHomeTest"></include>
+				 </methods>
+			</class>
+		</classes>
+	</test> 
+
+
+
+<test name="Validate Help/FAQ section">
+		<classes>
+			<class name="tests.app.HelpFAQTest"> 
+				<methods>
+				    <include name="helpSectionTest"></include>
+				 </methods>
+			</class>
+		</classes>
+	</test> 
+
+-->	
+
+<test name="Validate Home Management features">
+		<classes>
+			<class name="tests.app.HelpFAQTest"> 
+				<methods>
+				    <include name="helpSectionTest"></include>
+				 </methods>
+			</class>
+		</classes>
+	</test> 
+
+
+
+
+
+	
+<!-- 
+	
+	<test name="Lock-unlock using BLE lock">
+		<classes>
+			<class name="testmethods.LockUnlockTest"> 
+				<methods>
+				    <include name="lockUnlockTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	 
+	
+	<test name="Lock/unlock using WiFi Lock">
+		<classes>
+			<class name="testmethods.LockUnlockTest"> 
+				<methods>
+				    <include name="lockUnlockTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Add New Access Code">
+		<classes>
+			<class name="testmethods.AddAccessCodeTest">
+				<methods>
+				    <include name="addAccessCodeTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Delete Lock">
+		<classes>
+			<class name="testmethods.DeleteLockTest"> 
+				<methods>
+				    <include name="deleteLockTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Delete Home">
+		<classes>
+			<class name="testmethods.DeleteHomeTest"> 
+				<methods>
+				    <include name="deleteHomeTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Logout">
+		<classes>
+			<class name="testmethods.LogoutTest">
+				<methods>
+				    <include name="logoutTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+ 
+	<test name="Delete Account">
+		<classes>
+			<class name="testmethods.app.DeleteAccountTest"> 
+			</class>
+		</classes>
+	</test>
+ -->
+	
+</suite>
+	
+	

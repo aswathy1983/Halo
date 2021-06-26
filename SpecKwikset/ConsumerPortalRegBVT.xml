@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Consumer Portal Create User Account Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute all features in Create User Account of Consumer portal -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	<parameter name="appType" value="web"/>
+	<parameter name="device" value="null"/>
+	<parameter name="browser" value="chrome"/>
+	<parameter name="environment" value="QA"/>
+ 
+	  <test name="Check Registration">
+		<classes>
+			<class name="tests.portal.ConsumerAccountTest"> 
+				<methods>
+				    <include name="openPageURL"></include>
+				    <include name="verifyJumpPage"></include>				    
+				    <include name="chooseBrandKwiksetTest"></include>
+				    <include name="clickCreateAnAccountKwikLinkTest"></include>
+				    <include name="clickAllLinksTest"></include>
+				    <include name="clickAllFooterLinksTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="validEmailVerificationTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="setUpSecretQuestionsTest"></include>
+					<include name="registrationConfirmationTest"></include> 
+					
+					<include name="validLoginTest"></include>
+					<include name="selectMFATest"></include>
+					<include name="validPhoneCodeTest"></include>
+					<include name="deleteAccountTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	  
+</suite> 

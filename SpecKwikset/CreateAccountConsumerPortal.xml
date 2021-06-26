@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Consumer Portal Create User Account Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute all features in Create User Account of Consumer portal -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	<parameter name="appType" value="web"/>
+	<parameter name="device" value="null"/>
+	<parameter name="browser" value="chrome"/>
+	<parameter name="environment" value="QA"/>
+ 
+	  <!-- <test name="Check Registration">
+		<classes>
+			<class name="tests.portal.CreateUserAccountTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="clickCreateAnAccountLinkTest"></include>
+					<include name="verifyAccountNameTextTest"></include>
+					<include name="clickAllLinksTest"></include>
+					<include name="valUserDetailsTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="checkBackButtonPopupTest"></include> 
+					<include name="valEmailVerificationTest"></include>
+					<include name="emailVerificationTest"></include>
+					<include name="valEmailVerificationCodeTest"></include>
+					<include name="validEmailVerificationTest"></include>
+					<include name="valMobileVerificationTest"></include>
+					<include name="valMobileVerificationCodeTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="valSetUpSecretQuestionsTest"></include>
+					<include name="setUpSecretQuestionsTest"></include>
+					<include name="valRegistrationConfirmationTest"></include>
+					<include name="registrationConfirmationTest"></include>  
+					<include name="verifyUILoginTest"></include>
+					<include name="valLoginTest"></include>
+					<include name="validLoginTest"></include>
+					<include name="valMFATest"></include>
+					<include name="checkBrowserBackLoginTest"></include>
+					<include name="selectMFATest"></include>
+					<include name="valEmailVerifyCodeLoginTest"></include>
+					<include name="invalidCodeRetryLimitTest"></include>
+					<include name="validReLoginTest"></include>
+					<include name="logoutTest"></include>
+					<include name="loginResendTest"></include>
+					<include name="valEmailResendLimitTest"></include>
+					<include name="validPhoneLoginTest"></include>
+					<include name="valPhoneVerifyCodeLoginTest"></include>
+					<include name="invalidPhoneCodeRetryLimitTest"></include>
+					<include name="validRePhoneLoginTest"></include>
+					<include name="logoutPhoneTest"></include>
+					<include name="loginPhoneResendTest"></include>
+					<include name="valPhoneResendLimitTest"></include>
+					<include name="selForgotPasswordTest"></include>
+					<include name="verifyUIEmailRecoverTest"></include>
+					<include name="valEmailVerificationRecoverTest"></include>
+					<include name="checkBackButtonRcvrTest"></include>
+					<include name="valSecurityQuestionRecoverTest"></include>
+					<include name="verifyUIMFATest"></include>
+					<include name="valMFARcvrTest"></include>
+					<include name="selectRcvrMFATest"></include>
+					<include name="valFrgtVerifyPassEmailTest"></include>
+					<include name="valRcvrEmailResendLimitTest"></include>
+					<include name="validRcvrResendEmailCodeTest"></include>
+					<include name="selForgotPasswordMobileTest"></include>
+					<include name="valFrgtVerifyPassMobileTest"></include>
+					<include name="valRcvrMobileResendLimitTest"></include>
+					<include name="validRcvrResendMobileCodeTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	<!-- 
+	  <test name="Check Registration">
+		<classes>
+			<class name="tests.portal.CreateUserAccountTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="clickCreateAnAccountLinkTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="checkBackButtonPopupTest"></include> 
+					<include name="validEmailVerificationTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="SetUpSecretQuestionsTest"></include>
+					<include name="registrationConfirmationTest"></include>
+					<include name="verifyUILoginTest"></include>
+					<include name="valLoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  -->
+	   <test name="Login User">
+		<classes>
+			<class name="tests.portal.UserLoginTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+				   <!--  <include name="valLoginTest"></include> 
+				    <include name="valMFATest"></include>
+				    <include name="valEmailCodeTest"></include>
+				    <include name="valEmailResendLimitTest"></include> 
+				    <include name="valReMFATest"></include> 
+				    <include name="valMobileCodeNewTest"></include> 
+				    <include name="valMobileResendLimitTest"></include> 
+					<include name="validLoginTest"></include>
+					<include name="disableAccountTest"></include>
+					<include name="verifyDisableAccountVerbiageTest"></include>
+					<include name="valDisableTest"></include> 
+					<include name="disabledAccountLogoutTest"></include> 
+					<include name="disabledAccountloginTest"></include>
+					<include name="validateChangePasswordOptionTest"></include>
+					<include name="valChangePasswordTest"></include>
+					<include name="disabledAccountChangePasswordTest"></include>
+					<include name="disabledAccountloginAgainTest"></include>
+					<include name="validateChangeSecurityQstnsOptionTest"></include>
+					<include name="valEditSecurityQuestionTest"></include>
+					<include name="changeSecurityQuestionsTest"></include>
+					<include name="successMessageTest"></include> 
+					<include name="validateEditMyProfileOptionTest"></include>
+					<include name="valUserProfileTest"></include>
+					<include name="editProfileTest"></include>
+					<include name="valMobileCodeTest"></include>
+					<include name="validMobileResendCodeTest"></include>
+					<include name="enableAccountTest"></include>
+					<include name="checkBrowserBackButtonTest"></include>-->
+					<include name="enabledAccountLogoutTest"></include>
+					<include name="enabledAccountloginTest"></include>
+					<include name="deleteAccountTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	 <!--<test name="Check Home History">
+		<classes>
+			<class name="tests.portal.UserHomeHistoryTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="validLoginTest"></include>
+					<include name="homeHistoryNavigationTest"></include>
+					<include name="checkBrowserBackButtonTest"></include> 
+					<include name="viewHomeHistoryPage"></include>
+					<include name="viewDescriptionSortAscending"></include>
+					<include name="viewDescriptionSortDescending"></include>
+					<include name="viewSourceSortAscending"></include>
+					<include name="viewSourceSortDescending"></include> 
+					<include name="viewDateTimeSortAscending"></include>
+					<include name="viewDateTimeSortDescending"></include> 
+					<include name="viewEventIconList"></include>
+					<include name="viewUICheckListDescription"></include>
+					<include name="verifyFilterButtonDescription"></include>
+					<include name="verifyFilterAction"></include>
+					<include name="verifyClearAction"></include>
+					<include name="viewUICheckListSource"></include>
+					<include name="verifyFilterButtonSource"></include>
+					<include name="verifySourceFilterAction"></include>
+					<include name="verifySourceClearAction"></include>
+					<include name="viewUICheckListDateTime"></include>
+					<include name="verifyFilterButtonDate"></include>
+					<include name="verifyDateFilterAction"></include>
+					<include name="verifyDateClearAction"></include>
+					<include name="homeLockHistoryNavigationTest"></include>
+					<include name="viewLockNameSortAscending"></include>
+					<include name="viewLockNameSortDescending"></include>
+					<include name="viewUICheckListLockName"></include>
+					<include name="verifyFilterButtonLockName"></include>
+					<include name="verifyLockNameFilterAction"></include>
+					<include name="verifyLockNameClearAction"></include>
+					<include name="viewHomeDescriptionSortAscending"></include>
+					<include name="viewHomeDescriptionSortDescending"></include>
+					<include name="viewHomeDateTimeSortAscending"></include>
+					<include name="viewHomeDateTimeSortDescending"></include> 
+					<include name="viewHomeEventIconList"></include>-->
+					<!-- <include name="viewHomeUICheckListDescription"></include>
+					<include name="verifyHomeFilterButtonDescription"></include>
+					<include name="verifyHomeFilterAction"></include>
+					<include name="verifyHomeClearAction"></include> -->
+					 <!-- <include name="viewHomeUICheckListDateTime"></include>
+					<include name="verifyHomeFilterButtonDate"></include>
+					<include name="verifyHomeDateFilterAction"></include>
+					<include name="verifyHomeDateClearAction"></include>
+					<include name="viewHomeSourceSortAscending"></include>
+					<include name="viewHomeSourceSortDescending"></include> 
+					<include name="viewUIHomeCheckListSource"></include>
+					<include name="verifyHomeFilterButtonSource"></include>
+					<include name="verifyHomeSourceFilterAction"></include>
+					<include name="verifyHomeSourceClearAction"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+</suite> 

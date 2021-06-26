@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Consumer Portal Automation Smoke Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute all features as part of Smoke Testing the Consumer portal -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	 <parameter name="environment" value="QA"/>
+ 
+	 <test name="Check Registration">
+		<classes>
+			<class name="testmethods.ConsumerPortal.CreateAccountTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="clickCreateAnAccountLinkTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="emailVerificationTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="SetUpSecretQuestionsTest"></include>
+					<include name="registrationConfirmationTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="Check Invalid Login">
+		<classes>
+			<class name="testmethods.ConsumerPortal.LoginTest"> 
+				<methods>
+					<include name="loginInvalidCredentialsTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="Check Login">
+		<classes>
+			<class name="testmethods.ConsumerPortal.LoginTest"> 
+				<methods>
+					<include name="userLoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+ <!--  
+	<test name="Check Edit Profile">
+		<classes>
+			<class name="testmethods.ConsumerPortal.EditProfileTest"> 
+				<methods>
+					<include name="editProfileTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	-->
+	
+	<test name="Check Change Password">
+		<classes>
+			<class name="testmethods.ConsumerPortal.ChangePasswordTest"> 
+				<methods>
+					<include name="changePasswordTest"></include>
+					<include name="betaUserLogin"></include>
+					<include name="userLoginWithChangedPasswordTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	
+	
+	<test name="Check Change Security Questions">
+		<classes>
+			<class name="testmethods.ConsumerPortal.ChangeSecurityQuestionsTest"> 
+				<methods>
+					<include name="changeSecurityQuestionsTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+
+	<test name="Check Enable/Disable My Account">
+		<classes>
+			<class name="testmethods.ConsumerPortal.EnableDisableAccountTest"> 
+				<methods>
+					<include name="enableDisableAccountTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	
+	<test name="Check Logout">
+		<classes>
+			<class name="testmethods.ConsumerPortal.LogoutTest"> 
+				<methods>
+					<include name="UserLogoutTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="Check Forgot Password">
+		<classes>
+			<class name="testmethods.ConsumerPortal.ForgotPasswordTest"> 
+				<methods>
+					<include name="forgotPasswordTest"></include>
+					<include name="userLoginWithChangedPasswordTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+
+	<test name="Check Delete My Account">
+		<classes>
+			<class name="testmethods.ConsumerPortal.DeleteMyAccountTest"> 
+				<methods>
+					<include name="deleteAccountTest"></include>
+					<include name="confirmDeletionTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+</suite> 

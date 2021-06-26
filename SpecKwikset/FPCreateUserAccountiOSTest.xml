@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="User Account Features Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute User Account Features -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	
+	 
+	 <test name="User Account Test">
+		<classes>
+			<class name="tests.app.FPUserAccountTest"> 
+			  <methods>
+			  	 	<!--<include name="viewAccountNameTest"></include> 
+			  	 	 <include name="valAccountNameKeyboardTest"></include> 
+			  		 <include name="valAccountNameBackTest"></include> 
+			  		 <include name="valAccountNameTest"></include>
+			  		 <include name="validAccountNameTest"></include>
+			  		 <include name="valEmailKeyboardTest"></include>
+			  		 <include name="valEmailBackTest"></include>
+			  		 <include name="valEmailTest"></include> 
+			  		 <include name="valEmailVerifyCodeTest"></include> 
+			  		 <include name="valEmailResendLimitTest"></include>
+			  		 
+			  		 <include name="validEmailResendTest"></include>
+			  		 <include name="valEmailVerifyBackTest"></include>-->
+			  		<!--  <include name="valWaitTest"></include> 
+			  		 <include name="valMobileTest"></include>
+			  		 <include name="validMobileTest"></include>
+			  		 <include name="valMobileBackTest"></include>
+			  		 <include name="valMobileResendLimitTest"></include>
+			  		 
+			  		 <include name="validMobileResendTest"></include>
+			  		  
+			  		 <include name="valMobileVerifyBackTest"></include>
+			  		 <include name="valMobilelVerifyTest"></include>
+			  		 <include name="validMobileCodeTest"></include> -->
+			  		 
+			  		<!-- <include name="securityQuestion1DuplicateCheckTest"></include>
+			  		 <include name="securityQuestion2DuplicateCheckTest"></include>
+			  		 <include name="securityQuestion3DuplicateCheckTest"></include>-->
+			  		 
+			  		<!-- <include name="valSecurityQuestionBackTest"></include>
+			  		 <include name="valSecurityQuestionIosTest"></include>
+			  		 <include name="viewPasswordTest"></include>
+			  		 <include name="valPasswordKeyboardTest"></include>
+			  		 <include name="valPasswordBackTest"></include>
+			  		 <include name="valPasswordTest"></include>
+			  		 <include name="valRegisterSuccessPopupTest"></include> 
+			  		 <include name="valLoginTest"></include>
+			  		 <include name="valLoginBackTest"></include>
+			  		
+			  		 <include name="viewMFAPageTest"></include>
+			  		 <include name="valNoSelectTest"></include> 
+			  		 <include name="emailCodeBackTest"></include>
+			  		 <include name="valEmailVerifyCodeEditTest"></include>
+			  		 <include name="valEmailResendLimitEditTest"></include>
+			  		 <include name="validLoginEmailTest"></include>
+			  		 <include name="validLoginEmailCodeTest"></include>
+			  		 <include name="validLoginCancelTouchTest"></include>
+			  		 <include name="logOutTest"></include>
+			  		 
+			  		 <include name="userLoginIdleTest"></include>
+			  		 <include name="valSessionExpirePopupTest"></include> -->
+			  		<!-- <include name="validLoginTest"></include>
+			  		 <include name="mobileCodeBackTest"></include>
+			  		 <include name="valMobileVerifyLoginEditTest"></include>
+			  		 <include name="valMobileResendLimitEditTest"></include>
+			  		 <include name="validReLoginTest"></include>
+			  		 <include name="valMobilelVerifyEditTest"></include>
+			  		 <include name="validMobileCodeEditTest"></include>
+			  		 <include name="validLoginAgainCancelTouchTest"></include>
+			  		  
+			  		 <include name="logOutBLEOffTest"></include>-->
+			  		 <!--<include name="valWaitTest"></include>-->
+			  		 <!-- <include name="validDisableAccountLoginTest"></include>--><!-- check for account -->
+			  		
+			  		<!--   <include name="userLoginTest"></include>
+			  		 <include name="validLoginAgnCanTouchTest"></include>
+			  		 <include name="createAFirstHomeTest"></include>
+			  		 
+			  		 <include name="viewAccountSettingsPageTest"></include>
+			  		 <include name="verifyNameClearButtonTest"></include>
+			  		 <include name="validateEditAccountTest"></include>  -->
+			  		<!--  <include name="viewPhoneNumberPageTest"></include>
+			  		 <include name="validatePhoneNumTest"></include>
+			  		 <include name="phoneCodeResendLimitEditTest"></include>
+			  		 <include name="verifyOKInCodeResendTest"></include>
+			  		 <include name="valPhoneCodeBackTest"></include>
+			  		 <include name="viewChangePasswordPageTest"></include>
+			  		 <include name="valChangePasswordKeyboardTest"></include> 
+			  		 <include name="valChangePasswordTest"></include>
+			  		 <include name="valAccountLogOutPopUpTest"></include>
+			  		 <include name="editAccountEmailContentTest"></include>
+			  		 
+			  		 <include name="verifyPasswordHiddenTest"></include>
+			  		 <include name="reLoginAfterChngPwdTest"></include>
+			  		 <include name="valGlblSessionExpireChngPwdPopupTest"></include>
+			  		 <include name="reLoginAfterChangePasswordTest"></include>
+			  		 <include name="validReLoginAgnCanTouchTest"></include>
+			  		 
+			  		 <include name="verifyLoginTest"></include>
+			  		 <include name="minimiseAndRelaunchTest"></include>
+			  		 <include name="navToAccountSettingsPageSQTest"></include>
+			  		  
+			  		 <include name="viewSecurityQuestionPageTest"></include> -->
+			  		 
+			  		 <!-- <include name="scrtyQstn1DuplicateCheckASTest"></include>
+			  		 <include name="scrtyQstn2DuplicateCheckASTest"></include>
+			  		 <include name="scrtyQstn3DuplicateCheckASTest"></include> -->
+			  		 
+			  		<!--  <include name="valEditSecurityQuestionKeyboardTest"></include>
+			  		 <include name="valEditSecurityQuestionBackTest"></include> 
+			  		 
+			  		 <include name="valEditSecurityQuestioniOSTest"></include> 
+			  		 <include name="logOutRecPasswordTest"></include>
+			  		 <include name="viewRcvrPwdEmailPageTest"></include>
+			  		 <include name="valEmailPageTest"></include>
+			  		 <include name="viewRcvrPwdSecurityQnPageTest"></include>
+			  		 <include name="valRcvrPwdSecurityQnTest"></include>
+			  		 <include name="validRcvrPwdSecurityQnTest"></include>
+			  		 <include name="viewRcvrPwdMFAPageTest"></include>
+			  		 <include name="viewRecoverPasswordPageTest"></include>
+			  		 <include name="valFrgtVerifyPassEmailTest"></include>
+			  		 <include name="emailCodeResendLimitRecoverTest"></include>
+			  		 <include name="valRecoverPasswordPageBackTest"></include>
+			  		 <include name="valFrgtVerifyPassMobileTest"></include> 
+			  		 <include name="valFrgtPasswordMobileKeyboardTest"></include>
+			  		 <include name="mobileCodeResendLimitRecoverTest"></include>
+			  		 <include name="valWaitTest"></include> 
+			  		 <include name="validFrgtPasswordChangeTest"></include>-->
+			  		 
+			  		<!-- <include name="changePwdEmailHyperLinksTest"></include>--><!--Test hyperlinks -->
+			  		<!-- <include name="reLoginAfterRcvrPwdLogoutPopupTest"></include>
+			  		 <include name="valGlblSessionExpirePopupTest"></include>
+			  		 <include name="reLoginAfterRecoverPasswordTest"></include>
+			  		 <include name="validRecoverCanTouchTest"></include>
+			  		 <include name="navToAccountSettingsPageTest"></include>
+			  		 
+					 <include name="validPasswordChangeAgnTest"></include>
+					 <include name="forgotPwdEmailHyperLinksTest"></include>
+					
+					 <include name="reLoginAfterChngPwdAgnTest"></include>
+					 <include name="validRecoverCanTouchAgnTest"></include>
+			  		 <include name="navToAccountSettingsPageAgnTest"></include>
+					
+			  		 <include name="valDeleteAccountTest"></include> 
+			  		 <include name="valFailToDeletePopUpTest"></include>
+			  		 
+			  		 <include name="valDeletedAccountLoginTest"></include>
+			  		 <include name="valDeletedAccountLoginPopUpTest"></include> -->
+			  		 
+			  		<!-- check this again after creating an account -->
+			  		<!-- <include name="valDisabledAcntLoginTest"></include>
+			  		 <include name="valDisabledAcntEmailTest"></include>
+			  		 <include name="validDisableAcntEmailCodeTest"></include>
+			  		 <include name="validDisabledCanTouchTest"></include>
+			  		 <include name="valDisabledAcntLoginPopUpTest"></include>
+			  		 
+			  		 <include name="validCreateDeletedAccountTest"></include>
+			  		 <include name="validDeletedAccountNameTest"></include>
+			  		 <include name="validDeletedEmailTest"></include>
+			  		 <include name="createAcntEmailHyperLinksTest"></include>
+			  		 <include name="deletedAccountBackTest"></include>
+			  		 <include name="createAccountEmailContentTest"></include>
+			  		 <include name="deletedAccountBackAgnTest"></include>
+			  		 <include name="validDeletedEmailCodeTest"></include> 
+			  		 <include name="validDeletedPhNumberTest"></include>
+			  		 <include name="validDeletedPhNumberCodeTest"></include>
+			  		 <include name="valDeletedPhReUseSecurityQuestionIosTest"></include>
+			  		 <include name="validDeletedPasswordTest"></include>
+			  		 <include name="valDelAcntRegisterSuccessTest"></include> 
+			  		 
+			  		 <include name="deletedAcntCrtdLoginTest"></include>
+			  		 <include name="deletedAcntLoginEmailHyperLinksTest"></include>
+			  		 <include name="deletedAccountLoginBackTest"></include>
+			  		 <include name="deletedAcntCrtdLoginAgnTest"></include>
+			  		 <include name="deletedAcntCrtdEmailContentTest"></include> 
+			  		 <include name="deletedAccountLoginBackAgainTest"></include>
+			  		 
+			  		 <include name="forgotPwdLoginTest"></include>
+			  		 <include name="forgotPwdEmailHyperLinksTest"></include>
+			  		 <include name="forgotPwdNavBackTest"></include>
+			  		 <include name="forgotPwdEmailCntntTest"></include>
+			  		 <include name="forgotPwdNavBackAgnTest"></include> 
+			  		 <include name="forgotPwdChangeTest"></include>-->
+			  		<!--  <include name="forgotPwdVerifyEmailContentTest"></include>--><!-- Password changed email is not coming verify-->
+			  		 
+			  		<!-- <include name="validPhReUseCreateAccountTest"></include>
+			  		 <include name="validPhReUseAccountNameTest"></include>
+			  		 <include name="validPhReUseEmailTest"></include>
+			  		 <include name="validPhReUseEmailCodeTest"></include> 
+			  		 <include name="validPhNumberReUseTest"></include>
+			  		 <include name="validPhNumberReUseCodeTest"></include>
+			  		 <include name="valPhReUseSecurityQuestionIosTest"></include>
+			  		 <include name="validPhReUsePasswordTest"></include>
+			  		 <include name="valRegisterSuccessPhReUsePopupTest"></include>-->
+			  		 <!-- write script for phone re used account info changed email content  -->
+			  		 
+			  		 <!--  <include name="phUsedOwnerEmailContentTest"></include>-->
+			  		 
+			  		<!-- <include name="disableAcntRcvrPwdEmailPageTest"></include>
+			  		 <include name="disabledValidEmailPageTest"></include>
+			  		 <include name="disableRcvrPwdSecurityQnTest"></include>
+			  		 <include name="disableRcvrPwdMFAPageTest"></include>
+			  		 <include name="disableValidPasswordChangeTest"></include> 
+			  		 <include name="reLoginAfterRecoverPasswordDisableTest"></include>
+			  		 <include name="validDsblRcvrLoginCanTouchTest"></include>
+			  		 <include name="disableAcntLogInPopupTest"></include>-->
+			  		 
+			  		<!--  <include name="valPhUsedLoginTest"></include>
+			  		 <include name="viewMFAPagePhUseTest"></include>
+			  		 <include name="valNoSelectPhUseTest"></include>
+			  		 <include name="emailCodePhUseTest"></include> -->
+			  		<!--  <include name="disableAcntEmailHyperLinksTest"></include> -->
+			  		 <include name="emailCodeBackAgnPhUseTest"></include>
+			  		<!--  <include name="phUsedEmailContentTest"></include> 
+			  		 <include name="valEmailVerifyCodePhUseTest"></include>-->
+			  		 <include name="validEmailCodePhUseTest"></include> 
+			  		 <include name="validLoginCancelTouchPhUseTest"></include>
+			  		 <include name="valMobilePhUseTest"></include>
+			  		
+			  		 <include name="validMobilePhUseTest"></include>
+			  		<!-- <include name="valMobilelVerifyEditPhUseTest"></include>
+			  		 <include name="validMobileCodePhUseTest"></include>
+			  		 <include name="validPhUsedLoginCanTouchTest"></include>
+			  		 
+			  		  <include name="navToAcntSettingsPageTest"></include>
+			  		 <include name="valDeletePhReusedAccountTest"></include> 
+			  		 
+			  		 <include name="valNewAcntLoginTest"></include>
+			  		 <include name="validPhUsedLoginCanTouchTest"></include>
+			  		 <include name="navToAcntSettingsPageTest"></include>
+			  		 <include name="valDeletePhReusedAccountTest"></include> -->
+			  		 
+			  		 
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Consumer Portal Create User Account Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute all features in Create User Account of Consumer portal -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	<parameter name="appType" value="web"/>
+	<parameter name="device" value="null"/>
+	<parameter name="browser" value="chrome"/>
+	<parameter name="environment" value="QA"/>
+ 
+	  <test name="Check Registration">
+		<classes>
+			<class name="tests.portal.ConsumerAccountTest"> 
+				<methods>
+				    <include name="openPageURL"></include>
+				    <include name="verifyJumpPage"></include>
+				     <!--<include name="chooseBrandWeiserTest"></include>
+				    <include name="clickCreateAnAccountLinkTest"></include>
+				    <include name="clickAllLinksWeiserTest"></include>
+				    <include name="clickAllFooterLinksWeiserTest"></include>
+				    
+				    <include name="enterWZUserDetailsTest"></include>
+					<include name="validWZEmailVerificationTest"></include>
+					<include name="createAcntWZEmailHyperLinksTest"></include>
+					<include name="createAccountWZResendTest"></include>
+			  		<include name="createAccountWZEmailContentTest"></include>
+			  		<include name="createAccountAccountWZBackAgnTest"></include>
+			  		<include name="validCrtAcntWZEmailCodeTest"></include>
+					<include name="mobileWZVerificationTest"></include>
+					<include name="setUpWZSecretQuestionsTest"></include>
+					<include name="registrationWZConfirmationTest"></include>  
+					
+					<include name="verifyWZUILoginTest"></include>
+					<include name="validWZLoginTest"></include>
+					<include name="selectWZMFATest"></include>
+					<include name="validWZPhoneCodeTest"></include>
+					<include name="logoutWZTest"></include> 
+					
+					<include name="validWZEmailLoginTest"></include>
+					<include name="validWZEmailCodeTest"></include>
+					<include name="loginWZEmailHyperLinksTest"></include>
+			  		<include name="loginWZResendEmailTest"></include>
+			  		<include name="loginWZEmailContentTest"></include>
+			  		<include name="loginWZResendEmailAgnTest"></include>
+			  		<include name="validWZEmailCodeSelTest"></include>
+					
+					<include name="validateWZChangePasswordOptionTest"></include>
+					<include name="changeWZPasswordTest"></include>
+			  		<include name="editWZAccountEmailContentTest"></include>
+			  		
+			  		<include name="selKWForgotPasswordTest"></include>
+					<include name="verifyUIEmailRecoverTest"></include>
+					<include name="validKWEmailVerificationRcvrTest"></include>
+					<include name="validKWSecurityQuestionRecoverTest"></include>
+					<include name="verifyKWUIMFATest"></include>
+					<include name="selectWZRcvrMFATest"></include>
+					
+					<include name="forgotPwdWZEmailHyperLinksTest"></include>
+			  		<include name="forgotPwdWZResendTest"></include>
+			  		<include name="forgotPwdWZEmailCntntTest"></include>
+			  		<include name="forgotPwdWZResendAgnTest"></include> 
+			  		<include name="validWZFrgtVerifyPassEmailTest"></include>
+					
+					<include name="validWZReLoginEmailTest"></include>
+					<include name="validateWZChangePasswordTest"></include>
+					<include name="enblWZChangePasswordTest"></include>
+					<include name="chngPwdWZAcntEmailHyperLinksTest"></include>
+					
+					<include name="clickWZCreatePhReuseTest"></include>
+					<include name="enterWZPhReuseUserDetailsTest"></include>
+					<include name="validWZPhReuseEmailTest"></include>
+					<include name="validWZPhReuseEmailVerificationTest"></include>
+					<include name="mobileWZVPhReuserVerificationTest"></include>
+					
+					<include name="setUpWZSecretQuestionsPhReuseTest"></include>
+					<include name="registrationWZConfirmationnPhReuseTest"></include> 
+					<include name="phUsedWZEmailContentTest"></include>
+					
+					<include name="validWZEnblReLoginMobileTest"></include>
+					<include name="mobileVPhReuseTest"></include>
+					<include name="deleteWZAccountTest"></include>
+					<include name="logoutEmailTest"></include>
+					
+					<include name="validWZReLoginMobileTest"></include>
+					<include name="mobileValidPhReuseTest"></include>
+					<include name="deleteWZPhReUseTest"></include>
+				    
+				    <include name="goToHomePageWeisTest"></include>
+				    <include name="reloadPageTest"></include>-->
+				    
+				    <include name="chooseBrandKwiksetTest"></include>
+				   <!--  <include name="clickCreateAnAccountKwikLinkTest"></include>
+				    <include name="clickAllLinksTest"></include>
+				    <include name="clickAllFooterLinksTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="validEmailVerificationTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="setUpSecretQuestionsTest"></include>
+					<include name="registrationConfirmationTest"></include> 
+					  
+					<include name="verifyUILoginTest"></include>
+					<include name="validLoginTest"></include>
+					<include name="selectMFATest"></include>
+					<include name="validPhoneCodeTest"></include>
+					<include name="logoutTest"></include>
+					<include name="validEmailLoginTest"></include>
+					
+					<include name="validEmailCodeTest"></include>
+					<include name="loginEmailHyperLinksTest"></include>
+			  		<include name="loginResendEmailTest"></include>
+			  		<include name="loginEmailContentTest"></include>
+			  		<include name="loginResendEmailAgnTest"></include>
+			  		<include name="validEmailCodeSelTest"></include>
+					
+					<include name="disableAccountTest"></include>
+					<include name="verifyDisableAccountVerbiageTest"></include>
+					<include name="valDisableTest"></include>-->
+					<!--<include name="enableAccountTest"></include>
+					<include name="validateChangePasswordOptionTest"></include>
+					<include name="changePasswordTest"></include>
+			  		<include name="editAccountEmailContentTest"></include>
+					
+					<include name="validReLoginTest"></include>
+					<include name="validateChangeSecurityQstnsOptionTest"></include>
+					<include name="changeSecurityQuestionsTest"></include>
+					<include name="editProfileTest"></include>
+					<include name="logoutDisableTest"></include>
+					<include name="selDsblForgotPasswordTest"></include>
+					<include name="verifyDsblUIEmailRecoverTest"></include>
+					<include name="validDsblEmailVerificationRcvrTest"></include>
+					<include name="validDsblSecurityQuestionRecoverTest"></include>
+					<include name="verifyDsblUIMFATest"></include>
+					<include name="selectDsblRcvrMFATest"></include>
+					
+					<include name="validDsblFrgtVerifyPassEmailTest"></include>
+					
+					<include name="validDsblReLoginEmailTest"></include>
+					<include name="logoutDsblEmailTest"></include>
+					<include name="selDsblForgotPasswordMobileTest"></include>
+					
+					<include name="validDsblRcvrResendMobileCodeTest"></include>
+					
+					<include name="validDsblReLoginMobileTest"></include>
+					<include name="enableAccountTest"></include>
+					
+					<include name="validateEnblChangePasswordOptionTest"></include>
+					<include name="enblChangePasswordTest"></include>
+					
+					<include name="enblAcntEmailHyperLinksTest"></include>
+					<include name="validEnblReLoginMobileTest"></include>-->
+					
+				<!-- <include name="validMobileVerificationTest"></include>-->
+					<!-- <include name="deleteAccountTest"></include>
+					
+					<include name="clickCreateDeletedAccountTest"></include>
+					<include name="enterUserDetailsAgnTest"></include>
+					
+					<include name="validEmailVerificationAgnTest"></include>
+					<include name="createAcntEmailHyperLinksTest"></include>
+					<include name="deletedAccountResendTest"></include>
+			  		<include name="createAccountEmailContentTest"></include>
+			  		<include name="deletedAccountBackAgnTest"></include>
+			  		<include name="validDeletedEmailCodeTest"></include>
+			  		 
+					<include name="mobileVerificationAgnTest"></include>
+					
+					<include name="setUpSecretQuestionsAgnTest"></include>
+					<include name="registrationConfirmationnAgTest"></include> 
+					<include name="validReLoginAgnTest"></include>
+					<include name="logoutAgnTest"></include>
+					
+					<include name="selForgotPasswordTest"></include>
+					<include name="verifyUIEmailRecoverTest"></include>
+					<include name="validEmailVerificationRcvrTest"></include>
+					<include name="validSecurityQuestionRecoverTest"></include>
+					<include name="verifyUIMFATest"></include>
+					<include name="selectRcvrMFATest"></include>
+					
+					<include name="forgotPwdEmailHyperLinksTest"></include>
+			  		<include name="forgotPwdResendTest"></include>
+			  		<include name="forgotPwdEmailCntntTest"></include>
+			  		<include name="forgotPwdResendAgnTest"></include> 
+			  		<include name="validFrgtVerifyPassEmailTest"></include> 
+					
+					<include name="validReLoginEmailTest"></include>
+					<include name="logoutEmailTest"></include>
+					<include name="selForgotPasswordMobileTest"></include>
+					<include name="validRcvrResendMobileCodeTest"></include>-->
+					<include name="validReLoginMobileTest"></include> 
+					<!--<include name="logoutMobileTest"></include>-->
+					
+					<!--<include name="shareRequestEmailCntntTest"></include>
+					<include name="shareRequestEmailHyperLinksTest"></include>
+					<include name="shareAcceptTest"></include>
+					<include name="shareAcceptMemberTest"></include>
+					<include name="shareAcceptAdLeaveTest"></include>
+					<include name="shareDeclineAdminTest"></include>
+					<include name="leaveSharedHomeTest"></include>
+					<include name="acceptMemberHomeTest"></include>-->
+					<include name="goToHomeManagementTest"></include>
+					<include name="goToHomeManagementMemberTest"></include>
+					
+					<include name="goToHomeHistoryTest"></include>
+					<include name="verifyHomeHistoryEventsTest"></include>
+					<include name="goToHomePageTest"></include>
+					<include name="goToLockHistoryTest"></include>
+					<include name="viewLockHistoryPage"></include>
+					<include name="verifyLockHistoryEventsTest"></include>
+					<include name="goToHomeLockPageTest"></include>
+					<include name="viewHomeListTest"></include>
+					<include name="viewLockListTest"></include>
+					<include name="viewLockDetailsTest"></include>
+					<include name="goToLockManagementMemberTest"></include>
+					<include name="goToLockManagementTest"></include>
+					<include name="viewLockManagementTest"></include>
+					
+					<include name="clickCreatePhReuseTest"></include>
+					<include name="enterPhReuseUserDetailsTest"></include>
+					<include name="validPhReuseEmailTest"></include>
+					
+				<!--<include name="disableAcntEmailHyperLinksTest"></include>
+			  		<include name="emailCodeResendPhUseTest"></include>
+			  		<include name="phUsedEmailContentTest"></include> 
+			  		<include name="emailCodeResendAgnPhUseTest"></include>-->
+			  		
+			  		<include name="validPhReuseEmailVerificationTest"></include>
+			  		
+			  		<!--<include name="phUsedEmailContentTest"></include>--> 
+					<include name="mobileVPhReuserVerificationTest"></include>
+					
+					<include name="setUpSecretQuestionsPhReuseTest"></include>
+					<include name="registrationConfirmationnPhReuseTest"></include> 
+					<include name="phUsedEmailContentTest"></include>
+					
+					<include name="validPhReuseLoginTest"></include>
+					<include name="validPhReuseViewMFATest"></include>
+					
+					<!-- 
+					<include name="validReLoginTest"></include>
+					<include name="logoutTest"></include>
+					<include name="loginResendTest"></include>
+					<include name="valEmailResendLimitTest"></include>
+					<include name="validPhoneLoginTest"></include>
+					<include name="valPhoneVerifyCodeLoginTest"></include>
+					<include name="invalidPhoneCodeRetryLimitTest"></include>
+					<include name="validRePhoneLoginTest"></include>
+					<include name="logoutPhoneTest"></include>
+					<include name="loginPhoneResendTest"></include>
+					<include name="valPhoneResendLimitTest"></include>
+					<include name="selForgotPasswordTest"></include>
+					<include name="verifyUIEmailRecoverTest"></include>
+					<include name="valEmailVerificationRecoverTest"></include>
+					<include name="checkBackButtonRcvrTest"></include>
+					<include name="valSecurityQuestionRecoverTest"></include>
+					<include name="verifyUIMFATest"></include>
+					<include name="valMFARcvrTest"></include>
+					<include name="selectRcvrMFATest"></include>
+					<include name="valFrgtVerifyPassEmailTest"></include>
+					<include name="valRcvrEmailResendLimitTest"></include>
+					<include name="validRcvrResendEmailCodeTest"></include>
+					<include name="selForgotPasswordMobileTest"></include>
+					<include name="valFrgtVerifyPassMobileTest"></include>
+					<include name="valRcvrMobileResendLimitTest"></include>
+					<include name="validRcvrResendMobileCodeTest"></include> -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- 
+	  <test name="Check Registration">
+		<classes>
+			<class name="tests.portal.CreateUserAccountTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="clickCreateAnAccountLinkTest"></include>
+					<include name="enterUserDetailsTest"></include>
+					<include name="checkBackButtonPopupTest"></include> 
+					<include name="validEmailVerificationTest"></include>
+					<include name="mobileVerificationTest"></include>
+					<include name="SetUpSecretQuestionsTest"></include>
+					<include name="registrationConfirmationTest"></include>
+					<include name="verifyUILoginTest"></include>
+					<include name="valLoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  -->
+	  <!--  <test name="Login User">
+		<classes>
+			<class name="tests.portal.UserLoginTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>-->
+				   <!--  <include name="valLoginTest"></include> 
+				    <include name="valMFATest"></include>
+				    <include name="valEmailCodeTest"></include>
+				    <include name="valEmailResendLimitTest"></include> 
+				    <include name="valReMFATest"></include> 
+				    <include name="valMobileCodeNewTest"></include> 
+				    <include name="valMobileResendLimitTest"></include> 
+					<include name="validLoginTest"></include>
+					<include name="disableAccountTest"></include>
+					<include name="verifyDisableAccountVerbiageTest"></include>
+					<include name="valDisableTest"></include> 
+					<include name="disabledAccountLogoutTest"></include> 
+					<include name="disabledAccountloginTest"></include>
+					<include name="validateChangePasswordOptionTest"></include>
+					<include name="valChangePasswordTest"></include>
+					<include name="disabledAccountChangePasswordTest"></include>
+					<include name="disabledAccountloginAgainTest"></include>
+					<include name="validateChangeSecurityQstnsOptionTest"></include>
+					<include name="valEditSecurityQuestionTest"></include>
+					<include name="changeSecurityQuestionsTest"></include>
+					<include name="successMessageTest"></include> 
+					<include name="validateEditMyProfileOptionTest"></include>
+					<include name="valUserProfileTest"></include>
+					<include name="editProfileTest"></include>
+					<include name="valMobileCodeTest"></include>
+					<include name="validMobileResendCodeTest"></include>
+					<include name="enableAccountTest"></include>
+					<include name="checkBrowserBackButtonTest"></include>-->
+					<!-- <include name="enabledAccountLogoutTest"></include>
+					<include name="enabledAccountloginTest"></include>
+					<include name="deleteAccountTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  -->
+	 <!--<test name="Check Home History">
+		<classes>
+			<class name="tests.portal.UserHomeHistoryTest"> 
+				<methods>
+				    <include name="betaUserLogin"></include>
+				    <include name="chooseBrandTest"></include>
+					<include name="validLoginTest"></include>
+					<include name="homeHistoryNavigationTest"></include>
+					<include name="checkBrowserBackButtonTest"></include> 
+					<include name="viewHomeHistoryPage"></include>
+					<include name="viewDescriptionSortAscending"></include>
+					<include name="viewDescriptionSortDescending"></include>
+					<include name="viewSourceSortAscending"></include>
+					<include name="viewSourceSortDescending"></include> 
+					<include name="viewDateTimeSortAscending"></include>
+					<include name="viewDateTimeSortDescending"></include> 
+					<include name="viewEventIconList"></include>
+					<include name="viewUICheckListDescription"></include>
+					<include name="verifyFilterButtonDescription"></include>
+					<include name="verifyFilterAction"></include>
+					<include name="verifyClearAction"></include>
+					<include name="viewUICheckListSource"></include>
+					<include name="verifyFilterButtonSource"></include>
+					<include name="verifySourceFilterAction"></include>
+					<include name="verifySourceClearAction"></include>
+					<include name="viewUICheckListDateTime"></include>
+					<include name="verifyFilterButtonDate"></include>
+					<include name="verifyDateFilterAction"></include>
+					<include name="verifyDateClearAction"></include>
+					<include name="homeLockHistoryNavigationTest"></include>
+					<include name="viewLockNameSortAscending"></include>
+					<include name="viewLockNameSortDescending"></include>
+					<include name="viewUICheckListLockName"></include>
+					<include name="verifyFilterButtonLockName"></include>
+					<include name="verifyLockNameFilterAction"></include>
+					<include name="verifyLockNameClearAction"></include>
+					<include name="viewHomeDescriptionSortAscending"></include>
+					<include name="viewHomeDescriptionSortDescending"></include>
+					<include name="viewHomeDateTimeSortAscending"></include>
+					<include name="viewHomeDateTimeSortDescending"></include> 
+					<include name="viewHomeEventIconList"></include>-->
+					<!-- <include name="viewHomeUICheckListDescription"></include>
+					<include name="verifyHomeFilterButtonDescription"></include>
+					<include name="verifyHomeFilterAction"></include>
+					<include name="verifyHomeClearAction"></include> -->
+					 <!-- <include name="viewHomeUICheckListDateTime"></include>
+					<include name="verifyHomeFilterButtonDate"></include>
+					<include name="verifyHomeDateFilterAction"></include>
+					<include name="verifyHomeDateClearAction"></include>
+					<include name="viewHomeSourceSortAscending"></include>
+					<include name="viewHomeSourceSortDescending"></include> 
+					<include name="viewUIHomeCheckListSource"></include>
+					<include name="verifyHomeFilterButtonSource"></include>
+					<include name="verifyHomeSourceFilterAction"></include>
+					<include name="verifyHomeSourceClearAction"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+</suite> 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Finger Print Lock Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute add in an Aura/ Halo lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	
+
+	
+	 
+	 <test name="Finger Print Add Lock Test">
+		<classes>
+			<class name="tests.app.AddFingerPrintLockTest"> 
+			  <methods>
+			  		<include name="addLockTest"></include>
+			  		<include name="selectLockTest"></include>
+			  		<include name="connectioniOSTest"></include>
+			  		<include name="verifyLockBackButtoniOSTest"></include>
+			  		<include name="clearLockNameTextTest"></include>
+			  		<include name="lockNameIosTest"></include>
+			  		<include name="readWiFiInstructioniOSTest"></include>
+			  		<include name="selectWiFiHotSpotiOSTest"></include>
+			  		<include name="passwordBackiOSTest"></include>
+			  		<include name="enterWiFiPasswordiOSTest"></include>
+			  		<include name="lockActivationiOSTest"></include>
+			  		<include name="lockActivationImageTest"></include>
+			  		<include name="lockActvtnSuccessPopupTest"></include>
+			  		<!-- <include name="verifyLockImageTest"></include> -->
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

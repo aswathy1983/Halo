@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Data Retention TestNg Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to check if data retention is maintained for an existing account after app upgrade in a Halo/Halo FP locks -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+
+	 <test name="Data Retention Halo Test">
+		<classes>
+			<class name="tests.app.DataRetentionTest"> 
+			</class>
+		</classes>
+	</test> 
+	<test name="Data Retention FP Test">
+		<classes>
+			<class name="tests.app.DataRetentionTest"> 
+			</class>
+		</classes>
+	</test>
+	<test name="Data Retention Aura Test">
+		<classes>
+			<class name="tests.app.DataRetentionTest"> 
+			</class>
+		</classes>
+	</test>  
+</suite> 

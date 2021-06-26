@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="User Account BVT Test" configfailurepolicy="continue" preserve-order="true">
+
+<!--***NOTE*** 
+	This suite is run to execute user account features as part of BVT of the Android mobile application -->
+	
+	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+ 
+	 <test name="Create User Account">
+		<classes>
+			<class name="tests.app.FPUserAccountTest"> 
+				<methods>
+				    <include name="clickCreateAccountTest"></include>
+				    <include name="validAccountNameTest"></include>
+					<include name="validEmailTest"></include>
+					<include name="validEmailCodeTest"></include>
+					<include name="validMobileTest"></include>
+					<include name="validPhoneCodeTest"></include>
+					<include name="validSecurityQuestionTest"></include>
+					<include name="validPasswordTest"></include>
+					<include name="validCreateSuccessTest"></include>
+					<include name="userLoginValTest"></include>
+					<include name="biometricLoginAcceptTest"></include> 
+					<include name="navToAccountSettingsPageAgnTest"></include> 
+					<include name="validDeleteAccountTest"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	
+</suite> 

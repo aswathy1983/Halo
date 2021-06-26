@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Data Retention Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to check if data retention is maintained for an existing account after app upgrade in a Halo/Halo FP locks -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	
+
+	 <test name="Data Retention Test">
+		<classes>
+			<class name="tests.app.DataRetentionTest"> 
+			  <methods>
+			        <include name="appUpgradeTest"></include> 
+			        <include name="accountNameTest"></include>
+			        <include name="navigateBackTest"></include>
+			  		<include name="phoneNumberTest"></include>
+			  		<include name="phoneNumberBackTest"></include>
+			  		<include name="homeNameTest"></include>
+			  		<include name="homeUserTest"></include>
+			  		<include name="homenavBackFPTest"></include> 
+			  		<include name="homeLockHistoryHaloTest"></include>
+			  		<include name="homeBackTest"></include>
+			  		<include name="homeAccessCodeTest"></include>
+			  		<include name="homegoBackTest"></include>
+			  		<include name="homeLockSettingsTest"></include>
+			  		<include name="homeLockInfoTest"></include>
+			  		<include name="homePairedPhoneTest"></include>
+			  		<include name="navBackTest"></include>
+			  		<include name="lockSettingNameTest"></include>
+			  		<include name="lockSettingSoundTest"></include>
+			  		<include name="lockSettingAutoLockTest"></include>
+			  		<include name="lockSettingLedStatusTest"></include>
+			  		<include name="verifySyncFailedPopupTest"></include>
+			  		<include name="verifyLockSettingTest"></include>
+			  		<include name="navBackAgnTest"></include>
+			  		<!-- <include name="lockFunctionalityTest"></include>
+			  		<include name="navToHistoryTest"></include>
+			  		<include name="viewlockActivityTest"></include>-->
+			  		<include name="navToAccessCodeTest"></include> 
+			  		<include name="addAccessCodeTest"></include>
+			  		<include name="verifyAccessCodeFailedPopupTest"></include>
+			  		<include name="deleteAccessCodeTest"></include>
+			  		<include name="verifyAccessCodeDeleteFailPopupTest"></include>
+			  		<include name="homenavBackAgnTest"></include>
+			  		<include name="autoLockSettingsTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  
+</suite> 

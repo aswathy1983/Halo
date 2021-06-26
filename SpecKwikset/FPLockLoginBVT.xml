@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FP Lock BVT Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute BVT of FP lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	 
+	 <test name="FP Lock BVT Test">
+		<classes>
+			<class name="tests.app.HaloLockTest"> 
+			  <methods>
+			  	    <include name="loginUserTest"></include> 
+			  		<include name="viewLastUpdtTimeInMenuFPTest"></include>
+			  		<include name="lockFunctionalityTest"></include>
+			  		<include name="viewLockHistoryTest"></include>
+			  		<include name="viewlockActivityTest"></include>
+			  		<include name="clearLockHistoryFPTest"></include>
+			  		<include name="homeLockSettingsFPTest"></include>
+			  		<include name="homePairedPhoneTest"></include>
+			  		<include name="navBackTest"></include>
+			  		<include name="lockSettingNameFPTest"></include>
+			  		<include name="lockSettingSoundTest"></include>
+			  		<include name="verifyLockSoundSyncFailedPopupTest"></include>
+			  		<include name="lockSettingAutoLockTest"></include>
+			  		<include name="verifyAutoLockSyncFailedPopupTest"></include>
+			  		<include name="verifyAutoLockPageTest"></include>
+			  		<include name="lockSettingLedStatusTest"></include>
+			  		<include name="verifySyncFailedPopupTest"></include>
+			  		<include name="verifyLockSettingTest"></include> 
+			  		<include name="navBackAgnTest"></include>
+			  		<include name="verifyUIViewUserName"></include>
+			  		<include name="verifyUIFpUserProfile"></include>
+			  		<include name="updateFPUserProfileName"></include> 
+			  		<include name="verifySyncFailNamePopupTest"></include>
+			  		<include name="updateToPrvFpUserProfileName"></include> 
+			  		<include name="verifySyncFailUpdatePrvNamePopupTest"></include>
+			  		<include name="disableFpAccessProfile"></include>
+			  		<include name="verifySyncFailDisablePopupTest"></include>
+			  		<include name="enableFpAccessProfile"></include>
+			  		<include name="verifySyncFailEnablePopupTest"></include>
+			  		<include name="changeFPUserProfileDigitType"></include> 
+			  		<include name="verifySyncFailFingerPrintPopupTest"></include>
+			  		<include name="setScheduleTypeAnyTime"></include>
+			  		<include name="verifySyncFailAnyTimePopupTest"></include>
+			  		<include name="valScheduleTypeWeekly"></include>
+			  		<include name="setScheduleTypeWeekly"></include>
+			  		<include name="verifySyncFailWeeklyPopupTest"></include>
+			  		<include name="setScheduleTypeDate"></include>
+			  		<include name="verifySyncFailDatePopupTest"></include>
+			  		<include name="setPrvScheduleTypeAnyTime"></include>
+			  		<include name="verifySyncFailPrvSchPopupTest"></include>
+			  		<include name="updateToPrvFPDigitTypeTest"></include>
+			  		<include name="verifySyncFailPrvFPDigitTypeTest"></include>
+			  		<include name="viewFPUISecureModeTest"></include>
+			  		<include name="homenavBackAgnTest"></include>
+			  		<include name="autoLockSettingNameFPTest"></include>
+			  		<include name="autoLockSettingSoundTest"></include>
+			  		<include name="verifyLockSoundSyncFailPopupTest"></include>
+			  		<include name="autoLockSettingTest"></include>
+			  		<include name="verifyAutoLockSyncFailPopupTest"></include>
+			  		<include name="autoLockLedSoundTest"></include>
+			  		<include name="verifySyncFailPopupTest"></include>
+			  		<include name="lockUnlockBLEOff"></include>
+			  		<include name="lockUnlockInternetOff"></include>
+			  		<include name="deleteLockWifiOffTest"></include>
+			  		<include name="logoutTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

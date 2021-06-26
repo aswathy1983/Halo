@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="User Home Management Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to validate user home management functionality -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	 
+	 <test name="User Home Management Test">
+		<classes>
+			<class name="tests.app.HomeManagementTest"> 
+			  <methods>
+			   		<!--<include name="verifyCreateFirstHomePageTest"></include>
+			  		<include name="createFirstHomeTest"></include>
+			  		<include name="verifyUIAddHome"></include>
+			  		<include name="navigateBackTest"></include>-->
+			  		<include name="createFirstHomeHamburgerTest"></include>
+			  		<include name="verifyHomeNameKeyboardTest"></include>
+			  		<include name="valAddHome"></include>
+			  		<include name="deleteFirstHomeWIfiBleOffTest"></include>
+			  		<include name="deleteFirstHomeTest"></include>
+			  		<include name="valWifiOffCreateHomeTest"></include>
+			  		<include name="valBLEOffCreateHomeTest"></include>
+			  		<include name="addAnotherHomeButtonTest"></include>
+			  		<include name="verifyAddHomeNameKeyboardTest"></include>
+			  		<include name="valAnotherHomeTest"></include>
+			  		<include name="verifyAddHomeLandPageTest"></include>
+			  		<include name="valWifiOffAddHomeTest"></include>
+			  		<include name="valBLEOffAddHomeTest"></include>
+			  		<include name="modifyHomeButtonTest"></include>
+			  		<include name="modifyHomeNameKeyboardTest"></include>
+			  		<include name="valModifyHomeTest"></include>
+			  		<include name="verifyModifyHomeLandPageTest"></include>
+			  		<include name="valWifiOffModifyHomeTest"></include>
+			  		<include name="valBLEOffModifyHomeTest"></include>
+			  		<include name="verifyManageHomeUITest"></include>
+			  		<include name="valWifiOffManageHomeUITest"></include>
+			  		<include name="valBLEOffManageHomeUITest"></include>
+			  		<include name="viewManageHomeScrollTest"></include>
+			  		<include name="verifyHomeNameListOrderTest"></include>
+			  		<include name="logOutFromHomeOwnerShAcceptTest"></include>
+			  		<include name="loginHomeAdminOptionTest"></include>
+			  		<include name="modifyLockSoundOptionTest"></include>
+			  		<include name="viewShareHomeAdminOptionTest"></include>
+			  		<include name="verifyModifiedHomeNameAsAdminTest"></include>
+			  		<include name="verifyModifiedHomeNameAsAdminTest"></include>
+			  		<include name="leaveHomeSharePopupTest"></include>
+			  		<include name="leaveHomeShareReflectionInAdminTest"></include>
+			  		
+			  		
+			  		<include name="logOutFromHomeAdminTest"></include>
+			  		<include name="loginHomeOwnerReflectionTest"></include>
+			  		<include name="verifyAccesCodeByAdminInOwnerTest"></include>
+			  		<include name="verifySettingsByAdminInOwnerTest"></include>
+			  		<include name="leaveHomeShareReflectionInOwnerTest"></include>
+			  		<include name="verifyAccesCodeByAdminInOwnerTest"></include>
+			  		<include name="logOutFromHomeOwnerAfterVerifyTest"></include>
+			  		<include name="loginHomeMemberOptionTest"></include>
+			  		<include name="viewShareHomeMemberOptionTest"></include>
+			  		<include name="verifyModifiedHomeNameAsMemberTest"></include>
+			  		<include name="leaveHomeShareMemberTest"></include>
+			  		<include name="leaveHomeShareReflectionInMemberTest"></include>
+			  		<include name="logOutFromHomeMemberTest"></include>
+			  		<include name="loginHomeOwnerTest"></include>
+			  		<include name="leaveHomeShareMemReflectionInOwnerTest"></include>
+			  		<include name="logOutFromHomeOwnerAfterMemVerifyTest"></include>
+			  		<include name="loginHomeAdminToVerifyMemLeaveShareTest"></include>
+			  		<include name="verifyLeaveShareAsMemberInAdminTest"></include>
+			  		
+			  		
+			  		<include name="sendHomeShareToAdminTest"></include>
+			  		<include name="userAccessStatusAfterSendShareOwnerTest"></include>
+			  		<include name="logOutFromHomeOwnerStatusTest"></include>
+			  		<include name="loginHomeAdminShAcceptTest"></include>
+			  		<include name="userAccessStatusAdminTest"></include>
+			  		<include name="logOutFromHomeAdminShAcceptTest"></include>
+			  		<include name="loginHomeOwnerAccessDemoteTest"></include>
+			  		<include name="changeHomeShareAdminToMemberTest"></include>
+			  		<include name="verifyOwnerAdminToMemberAccessTest"></include>
+			  		
+			  		<include name="verifyHomeAccessTypeAdminToMemberTest"></include>
+			  		<include name="modifyHomeNameAdminToMemberTest"></include>
+			  		<include name="logoutFromHomeOwnerDemoteTest"></include>
+			  		<include name="loginHomeAdminDemoteTest"></include>
+			  		<include name="verifyHomeAdminDemoteUITest"></include>
+			  		<include name="verifyHomeNameAdminToMemberTest"></include>
+			  		<include name="verifyAddHomeSameNameAdminToMemberTest"></include>
+			  		
+			  		<include name="verifyHomeAdminDemoteLockPairTest"></include>
+			  		<include name="verifyHomeAdminDemoteManageUsersTest"></include>
+			  		<include name="verifyMemberLockDashboardSettingsAccessTest"></include>
+			  		<include name="verifyMemberLockDashboardHistoryAccessTest"></include>
+			  		<include name="verifyMemberLockDashboardPeopleAccessTest"></include>
+			  		<include name="logOutFromHomeAdminDemoteTest"></include>
+			  		<include name="loginHomeOwnerElevateTest"></include>
+			  		
+			  		<include name="changeHomeShareMemberToAdminTest"></include>
+			  		<include name="verifyHomeAccessTypeMemberToAdminTest"></include>
+			  		<include name="verifyOwnerMemberToAdminAccessTest"></include>
+			  		<include name="logoutFromHomeOwnerElevateTest"></include>
+			  		<include name="loginHomeMemberElevateTest"></include>
+			  		<include name="verifyHomeAdminElevateUITest"></include>
+			  		<include name="verifyHomeAdminElevateLockPairTest"></include>
+			  		<include name="verifyAdminLockSettingsNameTest"></include>
+			  		<include name="verifyAdminLockSettingsAutoLockTest"></include>
+			  		<include name="verifyAdminLockSettingsSoundTest"></include>
+			  		<include name="verifyAdminLockSettingsLedTest"></include>
+			  		<include name="verifyAdminPairedSmartPhoneTest"></include>
+			  		<include name="verifyAdminLockHistoryTest"></include>
+			  		<include name="verifyAdminLockAddAccessCodeTest"></include>
+			  		<include name="verifyAdminLockEditAccessCodeNameTest"></include>
+			  		<include name="verifyAdminLockEditAccessCodeTest"></include>
+			  		<include name="verifyAdminLockDeleteAccessCodeTest"></include>
+			  		<include name="verifyAdminLockSetScheduleTypeTest"></include>
+			  		<include name="verifyAdminLockShareAccessCodeTest"></include>
+			  		<include name="verifyAdminLockDisableAccessCodeTest"></include>
+			  		<include name="verifyAdminLockReEnableAccessCodeTest"></include>
+			  		<include name="editHomeNameMemberToAdminTest"></include>
+			  		<!-- check below code -->
+			  		<!--<include name="verifyElevateManageHomeShareAsAdminTest"></include>
+			  		<include name="valWifiOffElevateManageHomeShareAsMemberTest"></include>
+			  		<include name="valBLEOffElevateManageHomeShareAsMemberTest"></include>
+			  		<include name="verifyElevateAddExistHomeNameTest"></include>
+			  		<include name="leaveShareMemberToAdminTest"></include>
+			  		<include name="verifyElevateAddSameHomeNameTest"></include>
+			  		<include name="logOutFromHomeElevateAdminTest"></include>
+			  		<include name="loginVerifyHomeEditOwnerElevateTest"></include>
+			  		<include name="verifyModElevHomeNameReflectOwnerTest"></include>
+			  		<include name="verifyElevAdminEditAccessCodeNameTest"></include>
+			  		<include name="valManageHomeShareAsMemberTest"></include>
+			  		<include name="valManageHomeDisableShareAsMemberTest"></include>-->
+			  		
+			  		<!--<include name="deleteHomeWithLockBleOffTest"></include>//delete 2nd home from admin do in the end
+			  		<include name="deleteHomeWithLockBleONTest"></include>-->
+			  		<!--<include name="verifyHomeLockListTest"></include>
+			  		<include name="deleteHomeLockTest"></include>-->
+			  	<!--<include name="manageHomeUserUITest"></include>
+			  		<include name="manageHomeUserListTest"></include>
+			  		<include name="addHomeUserUITest"></include>
+			  		<include name="valAddHomeUserTest"></include>
+			  		<include name="addHomeUserEmailUITest"></include>
+			  		<include name="homeUserEmailDoneKeyboardTest"></include>
+			  		<include name="valAddHomeUserEmailTest"></include>
+			  		<include name="sendInvitePopupTest"></include>
+			  		<include name="pendingBannerDisplayTest"></include>
+			  		<include name="logoutHomeOwnerPendingAccessTest"></include>
+			  		<include name="loginHomeMemberPendingShareAcceptTest"></include>
+			  		<include name="logoutHomeMemberPendingAccessTest"></include>
+			  		<include name="loginHomeOwnerPendingShareAccessTest"></include>
+			  		<include name="verifyOwnerHomePendingToMemberTest"></include>
+			  		<include name="verifyOwnerHomeEditUserNameUITest"></include>
+			  		<include name="valEditHomeUserTest"></include>
+			  		<include name="valEditHomeUserAccessLevelTest"></include>
+			  		<include name="editHomeUserAccessLevelToMemberTest"></include>
+			  		<include name="verifyEditHomeUserAccessLevelToMemberTest"></include>
+			  		<include name="editHomeUserAccessLevelToAdminTest"></include>
+			  		<include name="verifyEditHomeUserAccessLevelToAdminTest"></include>
+			  		<include name="verifyOwnerManageUsersAdminTest"></include>
+			  		<include name="verifyOwnerManageUsersMemberTest"></include>
+			  		<include name="deleteHomeShareAdminTest"></include>
+			  		<include name="verifyDeleteShareLandPageAdminTest"></include>
+			  		<include name="sendInviteMemberFromAdminTest"></include>
+			  		Do above test-->
+			  		<!--<include name="logoutHomeOwnerTest"></include>
+			  		<include name="loginHomeAdminShareAcceptTest"></include>
+			  		<include name="viewAccessCodesBeforeLockPairTest"></include>
+			  		<include name="addAccessCodeBeforeLockPairTest"></include>
+			  		<include name="viewLockHistoryBeforePairTest"></include>
+			  		<include name="clearLockHistoryBeforePairTest"></include>
+			  		<include name="viewLockSettingsBeforePairTest"></include>
+			  		<include name="adminShareAcceptPopupTest"></include>
+			  		<include name="adminLockPairPopupTest"></include>
+			  		<include name="adminAddLockPairTest"></include>
+			  		<include name="selectLockTest"></include>
+			  		<include name="lockAddSuccessPopUpVerbiageTest"></include>
+			  		<include name="verifyLockDashboardUITest"></include>
+			  		<include name="verifyLockDoorTest"></include>
+			  		
+			  		<include name="valModifyAdminHomeTest"></include>
+			  		<include name="manageHomeUserUITest"></include>
+			  		<include name="addHomeUserUITest"></include>
+			  		<include name="valAddHomeUserTest"></include>
+			  		<include name="addHomeUserEmailUITest"></include>
+			  		<include name="homeUserEmailDoneKeyboardTest"></include>
+			  		<include name="valAddHomeUserEmailTest"></include>
+			  		
+			  		<include name="addAccessCodeAfterLockPairTest"></include>
+			  		<include name="editAccessCodeNameTest"></include>
+			  		<include name="editAccessCodeTest"></include>
+			  		<include name="deleteAccessCodeTest"></include>
+			  		<include name="setAnyTimeScheduleTypeTest"></include>
+			  		<include name="disableAccessCodeTest"></include>
+			  		<include name="shareAccessCodeTest"></include>
+			  		<include name="viewLockHistoryAfterPairTest"></include>
+			  		<include name="viewLockSettingsAfterPairTest"></include>
+			  		<include name="editLockSettingsNameTest"></include>
+			  		<include name="pairedSmartPhonesListTest"></include>-->
+			  		
+			  		<!--<include name="shareInviteMemberWithoutHomeTest"></include>
+			  		<include name="shareInvitePopupTest"></include>
+			  		<include name="verifyAddNewHomeTest"></include>
+			  		<include name="verifyAddNewHomeAdminEmailTest"></include>-->
+			  		
+			  		<!--<include name="sendShareNonSpectrumCloudUserTest"></include>
+			  		
+			  		<include name="changeHomeShareAdminToMemberTest"></include>
+			  		<include name="verifyHomeAccessTypeAdminToMemberTest"></include>
+			  		<include name="changeHomeShareMemberToAdminTest"></include>
+			  		<include name="verifyHomeAccessTypeMemberToAdminTest"></include>-->
+			  		<!-- <include name="verifyAddHomeWithExistingNameTest"></include> -->
+			  		<include name="sendShareNonSpectrumCloudAdminUserTest"></include>
+			  		
+			  		<include name="logOutFromAdminHomeTest"></include>
+			  		<include name="loginToMemberHomeTest"></include>
+			  		<include name="manageMemberHomeUserUITest"></include>
+			  		<include name="verifyModAdminHomeNameAsMemberTest"></include>
+			  		<include name="addMemberHomeUserUITest"></include>
+			  		<include name="valAddMemberHomeUserTest"></include>
+			  		<include name="addMemberUserEmailUITest"></include>
+			  		<include name="homeMemberUserEmailDoneKeyboardTest"></include>
+			  		<include name="valAddMemberUserEmailTest"></include>
+			  		<include name="userAccessStatusAfterSendShareMemberTest"></include>
+			  		
+			  		<include name="logoutHomeMemberTest"></include>
+			  		<include name="loginHomeOwnerHomeNameTest"></include>
+			  		<include name="verifyModAdminHomeNameAsOwnerTest"></include>
+			  		
+			  		<include name="deleteHomeShareofAdminPopupTest"></include>
+			  		<include name="verifyDeleteAdminHomeShareInOwnerTest"></include>
+			  		<include name="logoutFromHomeOwnerTest"></include>
+			  		
+			  		<include name="clickCreateAccountTest"></include>
+					<include name="validEmailTest"></include>
+					<include name="validMobileTest"></include>
+					<include name="validSecurityQuestionTest"></include>
+					<include name="validPasswordTest"></include>
+			  		
+			  		<include name="loginHomeMemberShareAcceptTest"></include>
+			  		<include name="memShareDeclinePopupTest"></include>
+			  		<include name="logoutHomeMemberDeclineTest"></include>
+			  		<include name="loginHomeOwnerHomeShareAgainTest"></include>
+			  		<include name="sendHomeShareToNSpecUserTest"></include>
+			  		<include name="logoutHomeOwnerDeclineTest"></include>
+			  		<include name="loginHomeMemberShareAcceptAgainTest"></include>
+			  		
+			  		
+			  		
+			  		<include name="memShareAcceptPopupTest"></include>
+			  		<include name="memberLockPairPopupTest"></include>
+			  		<include name="memberAddLockPairTest"></include>
+			  		<include name="selectNoLockMemberTest"></include>
+			  		<include name="verifyNoLockUIMemberTest"></include>
+			  		<include name="verifyNoLockMemberTest"></include>
+			  		<include name="selectOneLockMemberTest"></include>
+			  		<include name="lockAddSuccessMemPopUpVerbiageTest"></include>
+			  		<include name="verifyLockDashboardMemUITest"></include>
+			  		
+			  		<include name="verifyLockStatusMemTest"></include><!-- do this -->
+			  		
+			  		<include name="changeMHomeShareMemberToAdminTest"></include>
+			  		<include name="verifyMHomeAccessTypeMemberToAdminTest"></include>
+			  		<include name="changeMHomeShareAdminToMemberTest"></include>
+			  		<include name="verifyMHomeAccessTypeAdminToMemberTest"></include>
+			  		
+			  		<include name="logoutHomeMemberAcceptTest"></include>
+			  		<include name="loginHomeAdminAccessTypeTest"></include>
+			  		<include name="verifyDeleteHomeShareInAdminTest"></include>
+			  		
+			  		<include name="logoutVerifyDeleteHomeAdminTest"></include>
+			  		<include name="loginHomeAnotherAdminDeleteTest"></include>
+			  		<include name="verifyHomeShareInSharedAdminTest"></include>
+			  		<include name="deleteHomeShareAdminPopupTest"></include>
+			  		<include name="verifyDeleteHomeShareInAnthrAdminTest"></include>
+			  		<include name="verifyLockAfterDeleteInAdminWifiOffTest"></include>
+			  		<include name="logoutFromHomeAnthrAdminTest"></include>
+			  		<include name="loginHomeOwnerVerifyAnotherAdminLockTest"></include>
+			  		<include name="verifyAdminLockSettingsTest"></include>
+			  		
+			  		<include name="sendOwnerHomeShareToAdminTest"></include>
+			  		<!-- <include name="getHomeShareToAdminTest"></include> status not done-->
+			  		<include name="logOutFromHomeOwnerShareInviteTest"></include>
+			  		<include name="loginHomeAdminShInviteAcceptTest"></include>
+			  		<include name="logOutFromHomeAdminShInviteAcceptTest"></include>
+			  		<include name="loginHomeOwnerDeleteShareTest"></include>
+			  		
+			  		<include name="deleteHomeShareofMemberPopupTest"></include>
+			  		<include name="verifyDeleteMemberHomeShareInOwnerTest"></include>
+			  		<include name="logoutFromHomeOwnerTest"></include>
+			  		<include name="loginHomeMemberShareDeleteTest"></include>
+			  		<include name="verifyHomeShareInSharedMemberTest"></include>
+			  		<include name="logoutFromHomeSharedMemberTest"></include>
+			  		<include name="loginHomeSharedAdminDeleteTest"></include>
+			  		<include name="verifyMemberHomeShareInSharedAdminTest"></include>
+			  		
+			  		<include name="logoutVerifyMemberInSharedAdmin"></include>
+			  		<include name="loginHomeAnotherAdminForMemberDeleteTest"></include>
+			  		<include name="deleteHomeAdminSharedMemberPopupTest"></include>
+			  		<include name="verifyDeleteHomeShareInAnotherAdminTest"></include>
+			  		
+			  		<include name="logoutFromHomeAnotherAdminTest"></include>
+			  		<include name="loginHomeMemberofAnthrAdminMemberTest"></include>
+			  		<include name="verifyHomeShareInAnthrAdminSharedMemberTest"></include>
+			  		<include name="verifyLockAfterDeleteInAnotherAdminWifiOffTest"></include>
+			  		<include name="logoutFromHomeMemAnotherAdminTest"></include>
+			  		<include name="loginHomeOwnerAnthrAdminMemberTest"></include>
+			  		<include name="verifyHomeShareOwnerInAnthrAdminSharedMemberTest"></include>
+			  		
+			  		<include name="viewMenuFlyOutPageTest"></include>
+			  		<include name="viewMenuHomeNameAlphaListTest"></include>
+			  		<include name="viewMenuSlideTest"></include>
+			  		<include name="viewLockInMenuTest"></include>
+			  		<include name="verifyVerticalScrollInMenuTest"></include>
+			  		
+			  		<include name="logoutFromHomeAnotherAdminSharedUserTest"></include>
+			  		<include name="loginHomeAdminShInviteAcceptSharedUserTest"></include>
+			  		<!-- test below codes -->
+			  		<include name="manageAdminHomeUserUITest"></include>
+			  		<include name="manageAdminHomeUserListTest"></include>
+			  		<include name="addAdminHomeUserUITest"></include>
+			  		<include name="valAddAdminHomeUserTest"></include>
+			  		<include name="addAdminHomeUserEmailUITest"></include>
+			  		<include name="adminHomeUserEmailDoneKeyboardTest"></include>
+			  		<include name="valAddAdminHomeUserEmailTest"></include>
+			  		<include name="sendAdminInvitePopupTest"></include>
+			  		<include name="adminPendingBannerDisplayTest"></include>
+			  		<include name="logoutAdminHomeOwnerPendingAccessTest"></include>
+			  		<include name="loginHomeMemberPendingShareAcceptAdminTest"></include>
+			  		<include name="logoutHomeMemberPendingAccessAdminTest"></include>
+			  		
+			  		<include name="loginHomeOwnerPendingShareAccessTest"></include>
+			  		<include name="verifyOwnerHomePendingToMemberTest"></include>
+			  		<include name="verifyOwnerHomeEditUserNameUITest"></include>
+			  		<include name="valEditHomeUserTest"></include>
+			  		<include name="valEditHomeUserAccessLevelTest"></include>
+			  		<include name="editHomeUserAccessLevelToMemberTest"></include>
+			  		<include name="verifyEditHomeUserAccessLevelToMemberTest"></include>
+			  		<include name="editHomeUserAccessLevelToAdminTest"></include>
+			  		<include name="verifyEditHomeUserAccessLevelToAdminTest"></include>
+			  		<include name="verifyOwnerManageUsersAdminTest"></include>
+			  		<include name="verifyOwnerManageUsersMemberTest"></include>
+			  		<include name="deleteHomeShareAdminTest"></include>
+			  		<include name="verifyDeleteShareLandPageAdminTest"></include>
+			  		<include name="sendInviteMemberFromAdminTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="User Multiple Home Test">
+		<classes>
+			<class name="tests.app.HomeManagementTest"> 
+			  <methods>
+			  		<!-- <include name="createAFirstHomeTest"></include> -->
+			  		</methods>
+			</class>
+		</classes>
+	</test>  
+</suite> 

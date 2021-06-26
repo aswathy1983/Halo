@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Halo Lock BVT Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute BVT of Halo lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	 
+	 <test name="Halo Lock BVT Test">
+		<classes>
+			<class name="tests.app.HelpFAQTest"> 
+			  <methods>
+			  		<include name="helpFaqTest"></include>
+			  	    <include name="lockInstallationTest"></include>
+			  	    <include name="lockInstallationBackTest"></include>
+			  		<include name="helpFaqiOSTest"></include>
+			  		<include name="supportCentreTest"></include>
+			  		<include name="supportCentreBackTest"></include>
+			  		<include name="helpFaqAgiOSTest"></include>
+			  		<include name="userAgreementTest"></include>
+			  		<include name="navBackTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

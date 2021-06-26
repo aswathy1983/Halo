@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Finger Print Lock Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute BLE and WIFI pop up verbiage and Test Connection navigations while adding lock of Aura/ Halo lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	
+
+	   <!-- <test name="Finger Print Lock Image Test">
+		<classes>
+			<class name="tests.app.AddFingerPrintLockTest"> 
+			  <methods>
+			       <include name="verifyLockImageTest"></include>
+			  		<include name="verifyLockImageInMenu"></include>
+			  		<include name="clickLockImageInMenu"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  -->
+	<!--  <test name="Finger Print Lock BLE/Wifi popup Test">
+		<classes>
+			<class name="tests.app.AddFingerPrintLockTest"> 
+			  <methods>
+			  	   <include name="verifyLaunchBLEPopUpVerbiage"></include>
+			       <include name="verifyBLEPopUpVerbiage"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	<!-- <test name="Finger Print Lock Wifi popup Test">
+		<classes>
+			<class name="tests.app.AddFingerPrintLockTest"> 
+			  <methods>
+			  		<include name="verifyWifiPopUpVerbiage"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	 
+	 <test name="Finger Print Lock factory reset popup Test">
+		<classes>
+			<class name="tests.app.AddFingerPrintLockTest"> 
+			  <methods>
+			  		<include name="addLockTest"></include>
+			  		<include name="selectLockTest"></include> 
+			  		<!--  <include name="factoryResetPopUpVerbiageTest"></include>
+			  		<include name="factoryResetPopUpTest"></include>
+			  		<include name="navBackTest"></include>-->
+			  		  <include name="helpFaqTest"></include>
+			  		<include name="helpFaqBackTest"></include>
+			  		<include name="clickTryAgainTest"></include>
+			  		<include name="connectionWifiOffTest"></include>
+			  		<!--  <include name="connectAgainTest"></include> -->
+			  		<!--  <include name="clearLockNameTextTest"></include>
+			  		<include name="lockNameIosTest"></include>
+			  		<include name="readWiFiInstructioniOSTest"></include>
+			  		 <include name="validLockAddTest"></include>
+			  		<include name="valdtLockNameTest"></include>
+			  		<include name="readWiFiInstructionTest"></include>
+			  		<include name="selectWiFiHotSpotTest"></include>
+			  		<include name="passwordBackTest"></include>
+			  		<include name="enterWiFiPasswordTest"></include>
+			  		<include name="lockActivationTest"></include>
+			  		<include name="lockActvtnSuccessPopupTest"></include>//added on 11-05-2020 when pop up visible on downloading latest build
+			  		<include name="lockActivationImageTest"></include>-->
+				 </methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

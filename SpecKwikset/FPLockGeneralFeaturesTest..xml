@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Finger Print Lock General Features Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute Lock General Features of Fingerprint lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	
+	 
+	 <test name="Finger Print Lock General Features Test">
+		<classes>
+			<class name="tests.app.FPLockGeneralFeaturesTest"> 
+			  <methods>
+			  	 	 <include name="viewFPUISecureModeTest"></include> 
+			  		 <include name="enableDisableSecureModeTest"></include>
+			  		 <include name="viewFPUISecureModeRemoteTest"></include>
+			  		 <include name="enableSecureModeRemoteTest"></include>
+			  		 <include name="viewAudioStatusTest"></include>
+			  		 <include name="setAudioStatusTest"></include>
+			  		 <include name="setAudioStatusWifiOffTest"></include>
+			  		 <include name="setAudioStatusBleOffTest"></include>
+			  		 <include name="viewAutoLockStateTest"></include>
+			  		 <include name="setAutoLockStateTest"></include>
+			  		 <include name="setAutoLockStateWifiOffTest"></include>
+			  		 <include name="setAutoLockStateBleOffTest"></include>
+			  		 <include name="viewLEDStatusTest"></include>
+			  		 <include name="viewLEDStatusBLEOffTest"></include>
+			  		 <include name="viewLEDStatusWifiOffTest"></include> 
+			  		 <!--<include name="deleteLockTest"></include>-->
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

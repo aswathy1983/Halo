@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Halo Lock BVT Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute BVT of Halo lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="iOS"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	 
+	 <test name="Halo Lock BVT Test">
+		<classes>
+			<class name="tests.app.HaloLockTest"> 
+			  <methods>
+			  	   <include name="loginUserTest"></include> 
+			  		<include name="viewLastUpdtTimeInMenuTest"></include>
+			  		<include name="lockFunctionalityTest"></include>
+			  		<include name="viewLockHistoryTest"></include>
+			  		<include name="viewlockActivityTest"></include>
+			  		<include name="clearLockHistoryTest"></include>
+			  		<include name="homeLockSettingsTest"></include>
+			  		<include name="homePairedPhoneTest"></include> 
+			  		<include name="navBackTest"></include>
+			  	    <include name="lockSettingNameTest"></include>
+			  		<include name="lockSettingSoundTest"></include>
+			  		<include name="verifyLockSoundSyncFailedPopupTest"></include>
+			  		<include name="lockSettingAutoLockTest"></include>
+			  		<include name="verifyAutoLockSyncFailedPopupTest"></include>
+			  		<include name="verifyAutoLockPageTest"></include>
+			  		<include name="lockSettingLedStatusTest"></include>
+			  		<include name="verifySyncFailedPopupTest"></include>
+			  		<include name="verifyLockSettingTest"></include>
+			  		<include name="navBackAgnTest"></include>
+			  		<include name="verifyUIViewUserName"></include>
+			  		<include name="verifyUIUserProfile"></include>
+			  		<include name="updateUserProfileName"></include>
+			  		<include name="verifySyncFailNamePopupTest"></include>
+			  		<include name="updateToPrvUserProfileName"></include> 
+			  		<include name="verifySyncFailUpdatePrvNamePopupTest"></include>
+			  		<include name="verifyUpdateUserNamePageTest"></include>
+			  		<include name="disableAccessProfile"></include>
+			  		<include name="verifySyncFailDisablePopupTest"></include>
+			  		<include name="enableAccessProfile"></include>
+			  		<include name="verifySyncFailEnablePopupTest"></include>
+			  		<include name="updateUserAccessCode"></include> 
+			  		<include name="verifySyncFailAccessCodePopupTest"></include>
+			  		<include name="setScheduleTypeAnyTime"></include>
+			  		<include name="verifySyncFailAnyTimePopupTest"></include>
+			  		<include name="valScheduleTypeWeekly"></include>
+			  		<include name="setScheduleTypeWeekly"></include>
+			  		<include name="verifySyncFailWeeklyPopupTest"></include>
+			  		<include name="setScheduleTypeDate"></include> 
+			  		<include name="verifySyncFailDatePopupTest"></include>
+			  		<include name="setOneTimeSchedule"></include>
+			  		<include name="verifySyncFailOneTimePopupTest"></include>
+			  		<include name="setPrvScheduleTypeAnyTime"></include>
+			  		<include name="verifySyncFailPrvSchPopupTest"></include>
+			  		<include name="updateToPrvUserAccessCode"></include>
+			  		<include name="verifySyncFailPrvCodePopupTest"></include>
+			  		<include name="viewFPUISecureModeTest"></include>
+			  		<include name="homenavBackAgnTest"></include>
+			  		<include name="autoLockSettingNameHLTest"></include>
+			  		<include name="autoLockSettingSoundTest"></include>
+			  		<include name="verifyLockSoundSyncFailPopupTest"></include>
+			  		<include name="autoLockSettingTest"></include>
+			  		<include name="verifyAutoLockSyncFailPopupTest"></include>
+			  		<include name="autoLockLedSoundTest"></include>
+			  		<include name="verifySyncFailPopupTest"></include>
+			  		<include name="lockUnlockBLEOff"></include>
+			  		<!-- <include name="lockUnlockInternetOff"></include>
+			  		<include name="deleteLockWifiOffTest"></include>-->
+			  		<include name="logoutTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 

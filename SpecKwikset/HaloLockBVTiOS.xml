@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Halo Lock BVT Test" configfailurepolicy="continue" preserve-order="true">
+
+<!-- ***NOTE*** 
+	
+	This suite is run to execute BVT of Halo lock -->
+	
+ 	<listeners>
+		<listener class-name="configure.ReportGenerator" ></listener>
+		<listener class-name="configure.ExtentListener" ></listener>
+	</listeners>  
+	
+	<parameter name="appType" value="device"/>
+	<parameter name="device" value="android"/>
+	<parameter name="browser" value="null"/>
+	<parameter name="environment" value="QA"/>
+	
+
+	 
+	 <test name="Halo Lock BVT Test">
+		<classes>
+			<class name="tests.app.HaloLockTest"> 
+			  <methods>
+			  		<include name="viewLastUpdateTimeMenuFlyoutTest"></include>
+			  		<include name="lockFunctionalityTest"></include>
+			  		<include name="viewLockHistoryTest"></include>
+			  		<include name="clearLockHistoryTest"></include>
+			  		<!-- <include name="lockSettingsTest"></include>-->
+			  		<include name="homeLockSettingsTest"></include>
+			  		<include name="verifyUIViewUserName"></include>
+			  		<include name="verifyUIUserProfile"></include>
+			  		<include name="updateUserProfileName"></include>
+			  		<include name="disableAccessProfile"></include>
+			  		<include name="enableAccessProfile"></include>
+			  		<include name="updateUserAccessCode"></include>
+			  		<include name="setScheduleTypeAnyTime"></include>
+			  		<include name="valScheduleTypeWeekly"></include>
+			  		<include name="setScheduleTypeWeekly"></include>
+			  		<include name="setScheduleTypeDate"></include>
+			  		<include name="setOneTimeSchedule"></include>
+			  		<include name="viewFPUISecureModeTest"></include>
+			  		<include name="lockUnlockBLEOff"></include>
+			  		<include name="lockUnlockInternetOff"></include>
+			  		<include name="deleteLockWifiOffTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>   
+</suite> 
